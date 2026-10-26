@@ -848,12 +848,14 @@ header#home {
 
 .p6 { right: 9%; top: 45%; width: 20px; animation-delay: -5s; }
 
-@keyframes *petalFloat* {
+@keyframes petalFloat {
+    0%, 100% {
+        translate: 0 0;
+    }
 
-    0%, 100% { translate: 0 0; }
-
-    50%      { translate: 6px 12px; }
-
+    50% {
+        translate: 6px 12px;
+    }
 }
 
 .skills-inner {
@@ -2502,290 +2504,290 @@ footer {
 
     
 
+/* MOBILE RESPONSIVE STYLES */
+/* Place inside @media (max-width: 768px) */
+
+/* ================= NAVBAR ================= */
+
 .navbar {
-
     flex-direction: column;
-
     gap: 12px;
-
     padding: 15px 3%;
-
 }
 
 .logo-svg {
-
     width: 85px;
-
 }
 
 .nav-links {
-
     display: flex;
-
     flex-wrap: nowrap;
-
     justify-content: center;
-
     gap: 0;
-
     width: 100%;
-
 }
 
 .nav-links a {
-
     font-size: 9px;
-
     letter-spacing: 0;
-
     padding: 6px 7px;
-
     white-space: nowrap;
-
 }
+
+
+/* ================= HERO ================= */
 
 .hero {
-
     min-height: 100svh;
-
     padding: 170px 20px 70px;
-
     background-size: cover;
-
     background-position: 65% center;
-
     background-repeat: no-repeat;
-
 }
 
-    .hero h1 {
+.hero h1 {
+    font-size: clamp(42px, 10vw, 65px);
+}
 
-        font-size: clamp(42px, 10vw, 65px);
+.hero .tagline {
+    font-size: 23px;
+}
 
-    }
 
-    .hero .tagline {
-
-        font-size: 23px;
-
-    }
-
-    /* OTHER SECTIONS*/
-
-    #projects {
-
-        padding: 75px 6%;
-
-    }
-
-    #contact {
-
-        padding: 40px 6% 70px;
-
-    }
-
-    
-
-/* PROJECTS - MOBILE*/
+/* ================= PROJECTS ================= */
 
 #projects {
-
     padding: 45px 5% 65px;
-
 }
 
 .projects-heading {
-
     margin-bottom: 24px;
-
 }
 
 .projects-container {
-
     grid-template-columns: 1fr;
-
     max-width: 420px;
-
     gap: 24px;
-
     margin: 0 auto;
-
 }
 
 .project-card {
-
     padding: 14px 14px 20px;
-
     border-radius: 18px;
-
 }
 
 .project-image img {
-
     max-width: 260px;
-
     width: 100%;
-
     height: auto;
-
 }
 
 .project-content h3 {
-
     font-size: 23px;
-
     margin: 8px 0 5px;
-
 }
 
 .project-content p {
-
     font-size: 15px;
-
     line-height: 1.35;
-
     margin-bottom: 10px;
-
 }
 
 .project-tags {
-
     gap: 6px;
-
     margin-bottom: 12px;
-
 }
 
 .project-tags span {
-
     font-size: 13px;
-
     padding: 3px 10px;
-
 }
 
 .project-btn {
-
     font-size: 17px;
-
     padding: 7px 26px;
-
 }
 
 .projects-side {
-
     width: 12%;
-
     opacity: 0.65;
-
 }
 
-    .projects-heading .heading-line { width: 60px; }
+.projects-heading .heading-line {
+    width: 60px;
+}
 
-    .projects-divider .heading-line { width: 70px; }
+.projects-divider .heading-line {
+    width: 70px;
+}
 
-    .project-btn::before,
+.project-btn::before,
+.project-btn::after {
+    display: none;
+}
 
-    .project-btn::after { display: none; }
 
-    /* CONTACT - MOBILE ONLY */
-    #contact {
-        padding: 45px 18px 65px;
-    }
+/* ================= CONTACT ================= */
 
-    .contact-heading {
-        padding: 0;
-        margin-bottom: 30px;
-    }
+#contact {
+    padding: 45px 18px 65px;
+}
 
-    #contact h2 { font-size: 43px; }
-    .contact-subtitle { font-size: 18px; line-height: 1.4; }
-    .contact-heading .heading-line { width: 55px; }
+.contact-heading {
+    padding: 0;
+    margin-bottom: 30px;
+}
 
-    .contact-scene {
-        width: 100%;
-        max-width: none;
-        height: 100%;
-        object-fit: cover;
-        object-position: left center;
-        opacity: 0.18;
-        -webkit-mask-image: none;
-        mask-image: none;
-    }
+#contact h2 {
+    font-size: 43px;
+}
 
-    .contact-container {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr);
-        gap: 35px;
-        width: 100%;
-        max-width: 440px;
-        margin: 0 auto;
-        padding: 0;
-    }
+.contact-subtitle {
+    font-size: 18px;
+    line-height: 1.4;
+}
 
-    .contact-info { width: 100%; text-align: center; }
-    .contact-info h3 { font-size: 30px; margin-bottom: 10px; }
-    .contact-info p {
-        font-size: 19px;
-        line-height: 1.4;
-        max-width: 300px;
-        margin: 0 auto 22px;
-    }
-    .contact-info a {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 14px;
-        width: fit-content;
-        min-width: 175px;
-        margin: 0 auto 12px;
-        font-size: 20px;
-    }
-    .icon-circle { width: 42px; height: 42px; flex-shrink: 0; }
+.contact-heading .heading-line {
+    width: 55px;
+}
 
-    .form-wrap {
-        width: 100%;
-        min-width: 0;
-        max-width: 380px;
-        margin: 15px auto 0;
-    }
-    .contact-form {
-        width: 100%;
-        padding: 28px 22px 24px;
-        gap: 9px;
-        border-radius: 24px;
-    }
-    .contact-form label { font-size: 13px; }
-    .contact-form input,
-    .contact-form textarea {
-        width: 100%;
-        min-width: 0;
-        padding: 12px 13px;
-        font-size: 16px;
-    }
-    .contact-form textarea { min-height: 110px; }
-    .contact-form button {
-        width: 100%;
-        min-height: 48px;
-        padding: 10px 14px;
-        font-size: 19px;
-        line-height: 1.2;
-        white-space: nowrap;
-        gap: 8px;
-    }
-    .contact-form .form-note {
-        font-size: 12px;
-        line-height: 1.5;
-        margin-top: 8px;
-    }
-    .form-ribbon { width: 38%; top: -12%; right: -4%; }
-    .form-flowers { width: 30%; bottom: -4%; left: -5%; }
 
-    .footer-line {
+/* Contact Background */
 
-        display: none;
+.contact-scene {
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    object-fit: cover;
+    object-position: left center;
+    opacity: 0.18;
+    -webkit-mask-image: none;
+    mask-image: none;
+}
 
-    }
+
+/* Contact Layout */
+
+.contact-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 35px;
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+
+/* Contact Information */
+
+.contact-info {
+    width: 100%;
+    text-align: center;
+}
+
+.contact-info h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 19px;
+    line-height: 1.4;
+    max-width: 300px;
+    margin: 0 auto 22px;
+}
+
+.contact-info a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 14px;
+    width: fit-content;
+    min-width: 175px;
+    margin: 0 auto 12px;
+    font-size: 20px;
+}
+
+.icon-circle {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+}
+
+
+/* ================= CONTACT FORM ================= */
+/* ================= CONTACT FORM ================= */
+
+.form-wrap {
+    position: relative;
+    width: min(72vw, 400px);
+    max-width: none;
+    min-width: 0;
+    margin: 45px auto 0;
+    transform: translateX(-2.7%);
+    overflow: visible;
+}
+
+.contact-form {
+    width: 100%;
+    padding: 28px 22px 24px;
+    gap: 9px;
+    border-radius: 24px;
+}
+
+.contact-form label {
+    font-size: 13px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    min-width: 0;
+    padding: 12px 13px;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    min-height: 110px;
+}
+
+.contact-form button {
+    width: 100%;
+    min-height: 48px;
+    padding: 10px 14px;
+    font-size: 19px;
+    line-height: 1.2;
+    white-space: nowrap;
+    gap: 8px;
+}
+
+.contact-form .form-note {
+    font-size: 12px;
+    line-height: 1.5;
+    margin-top: 8px;
+}
+
+
+/* ================= FORM FLOWERS ================= */
+
+.form-ribbon {
+    top: -17.2cqw;
+    right: -18.1cqw;
+    width: 62.5cqw;
+}
+
+.form-flowers {
+    bottom: -8.3cqw;
+    left: -12.8cqw;
+    width: 34.6cqw;
+}
+
+/* ================= FOOTER ================= */
+
+.footer-line {
+    display: none;
+}
 
 }
 
